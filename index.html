@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 | English Handbook</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <div id="hdr-wrapper">
+            <div id="hdr-link">
+                <a href="https://www.duolingo.com/" target="_blank">
+                    <img src="/images/dulingo.png" alt="duolingo">
+                </a>
+                <a href="https://github.com/mehmetenesvarol?tab=repositories" target="_blank">
+                    <img src="/images/github.png" alt="githup profile">
+                </a>
+            </div>
+            <div>
+                <h2>English Handbook</h2>
+            </div>
+            <div id="hdr-bgc">
+                <button id="hdr-dark">
+                </button>
+                <button id="hdr-light">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <div id="wrapper">
+            <div class="topper">
+                <div class="words-wrapper" id="daily-wrapper">
+                    <div class="wrapper-header">
+                        <h1>Daily Words</h1>
+                        <div class="button-wrapper">
+                            <button class="add-words-btn" id="add-daily-btn">Add Word</button>
+                            <button class="words-btn" id="start-daily-btn">Start Daily Exercise</button>
+                        </div>
+                    </div>
+                    <div class="lists" id="daily-list">
+                        <div class="add-rows">
+                            <input id="add-daily-input-word" type="text">
+                            <input id="add-daily-input-main" type="text">
+                        </div>
+                        <div class="word-wrapper">
+                            <i onclick="metet(1)" class="fa-solid fa-xmark"></i>
+                            <div class="wl-wrapper">
+                                <h5>word</h5>
+                                <h5>main</h5>
+                            </div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topper">
+                <div class="words-wrapper" id="all-wrapper">
+                    <div class="wrapper-header">
+                        <h1>All Words</h1>
+                        <div class="button-wrapper">
+                            <button class="words-btn" id="start-all-btn">Start All Exercise</button>
+                            <button class="add-words-btn" id="add-all-btn">Add Word</button>
+                        </div>
+                    </div>
+                    <div class="lists" id="all-list">
+
+                        <!-- display none flex -->
+                        <div class="add-rows">
+                            <input id="add-all-input-word" type="text">
+                            <input id="add-all-input-word" type="text">
+                        </div>
+
+                        <div class="word-wrapper">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <div class="wl-wrapper">
+                                <h5>word</h5>
+                                <h5>main</h5>
+                            </div>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="word-wrapper">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <div class="wl-wrapper">
+                                <h5>word</h5>
+                                <h5>main</h5>
+                            </div>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="word-wrapper">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <div class="wl-wrapper">
+                                <h5>word</h5>
+                                <h5>main</h5>
+                            </div>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--     exe-page         display: flex none; -->
+    <div id="exe-page" style="display: none;">
+        <div id="exe-container">
+            <div id="exe-wrapper">
+                <form id="exe-form">
+                    <h1 id="exe-word">word</h1>
+                    <h2 style="color: green;" id="exe-main">main</h2>
+                    <input type="text" id="exe-input" placeholder=". . .">
+                    <div id="form-control">
+                        <button id="exe-back">
+                            <i class="fa-solid fa-arrow-left fa-2xl"></i>
+                            <h3>Back To Menu</h3>
+                        </button>
+                        <button id="exe-pass">
+                            <i class="fa-solid fa-arrow-right fa-2xl"></i>
+                            <h3>Pass The Word</h3>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

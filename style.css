@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(193, 193, 193);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+#hdr-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#hdr-link{
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+#hdr-link a img {
+    width: 50px;
+    height: 50px;
+}
+
+#hdr-bgc {
+    width: 70px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hdr-bgc button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#hdr-dark {
+    background-color: black;
+    cursor: pointer;
+    border: 3px solid white;
+
+}
+
+#hdr-light {
+    background-color: white;
+    cursor: pointer;
+    border: 3px solid black;
+
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    width: 95%;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topper {
+    width: 40%;
+    height: 38rem;
+    min-width: 360px;
+    max-width: 570px;
+    display: flex;
+    margin: 5px;
+}
+
+.words-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 40px;
+}
+
+.wrapper-header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.words-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 800;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.add-words-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: small;
+    font-weight: 800;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.lists {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.add-rows {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.add-rows input {
+    border-radius: 15px;
+    width: 140px;
+    height: 20px;
+    font-weight: 600;
+    font-size: small;
+}
+
+.word-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.word-wrapper i{
+    cursor: pointer;
+}
+
+.wl-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+/* display none flex */
+
+#exe-page {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+#exe-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#exe-wrapper {
+    width: 50%;
+    height: 400px;
+    min-width: 350px;
+    display: flex;
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#exe-form {
+    margin: 20px;
+}
+
+#exe-form h1 {
+    margin-top: 50px;
+    display: block;
+}
+
+#exe-form input {
+    border: 5px solid white;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: large;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#form-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-control button {
+    cursor: pointer;
+    height: 70px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#exe-back {
+    background-color: red;
+}
+
+#exe-pass {
+    background-color: orange;
+}
