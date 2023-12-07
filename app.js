@@ -15,7 +15,6 @@
 //         stt = true
 //     ]
 // ]
-
 // add word button (daily)
 const dailyWordInput = document.getElementById("add-daily-input-word");
 const dailyMainInput = document.getElementById("add-daily-input-main");
@@ -56,6 +55,7 @@ function addToStorage(word, main, boolean) {
     localStorage.setItem("wordArr", JSON.stringify(storage));
 };
 
+// reflesh lists
 function refleshList() {
     let storage = JSON.parse(localStorage.getItem("wordArr"));
     storage.forEach((elem) => {
@@ -67,9 +67,22 @@ function refleshList() {
     })
 }
 
-function addToDaily(word,main){
 
-}
+// add word to daily list
+const dailyList = document.getElementById("daily-list")
+function addToDaily(word,main){
+    let div = document.createElement("div")
+    div.className = "word-wrapper"
+    div.innerHTML = `
+    <i onclick="removeWord(wid-${word}-${main})" class="fa-solid fa-xmark"></i>
+    <div class="wl-wrapper">
+        <h5>${word}</h5>
+        <h5>${main}</h5>
+    </div>
+    <i class="fa-solid fa-arrow-right"></i>
+    `
+    div.id=`wid-${word}-${main}`
+}   
 
 {/* 
 <div class="word-wrapper">
@@ -83,7 +96,17 @@ function addToDaily(word,main){
 */}
 
 function addToAll(word,main){
-
+    let div = document.createElement("div")
+    div.className = "word-wrapper"
+    div.innerHTML = `
+    <i class="fa-solid fa-arrow-left"></i>
+    <div class="wl-wrapper">
+        <h5>${word}</h5>
+        <h5>${main}</h5>
+    </div>
+    <i onclick="removeWord(wid-${word}-${main})" class="fa-solid fa-xmark"></i>
+    `
+    div.id=`wid-${word}-${main}`
 }
 
 {/* 
@@ -97,6 +120,15 @@ function addToAll(word,main){
 </div> 
 */}
 
-function removeWord(word,main){
+// remove word
+function removeWord(id){
+    let removedWord = document.getElementById(`${id}`)
+    removeWordStorage(word,main)
 
 }
+
+// remove word from storage
+function removeWordStorage(word,main){
+
+}
+
