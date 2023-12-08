@@ -69,10 +69,10 @@ function refleshList() {
 
 
 // add word to daily list
-const dailyList = document.getElementById("daily-list")
+const dailyList = document.getElementById("daily-list");
 function addToDaily(word,main){
-    let div = document.createElement("div")
-    div.className = "word-wrapper"
+    let div = document.createElement("div");
+    div.className = "word-wrapper";
     div.innerHTML = `
     <i onclick="removeWord(wid-${word}-${main})" class="fa-solid fa-xmark"></i>
     <div class="wl-wrapper">
@@ -96,8 +96,8 @@ function addToDaily(word,main){
 */}
 
 function addToAll(word,main){
-    let div = document.createElement("div")
-    div.className = "word-wrapper"
+    let div = document.createElement("div");
+    div.className = "word-wrapper";
     div.innerHTML = `
     <i class="fa-solid fa-arrow-left"></i>
     <div class="wl-wrapper">
@@ -107,7 +107,7 @@ function addToAll(word,main){
     <i onclick="removeWord(wid-${word}-${main})" class="fa-solid fa-xmark"></i>
     `
     div.id=`wid-${word}-${main}`
-}
+};
 
 {/* 
 <div class="word-wrapper">
@@ -125,10 +125,21 @@ function removeWord(id){
     let removedWord = document.getElementById(`${id}`)
     removeWordStorage(word,main)
 
-}
+};
 
 // remove word from storage
 function removeWordStorage(word,main){
 
-}
+};
 
+// background color dark
+document.getElementById("hdr-dark").addEventListener("click",(()=>{
+    document.getElementById("container").style="background:white;"
+
+}));
+
+
+// background color light
+document.getElementById("hdr-dark").addEventListener("click",(()=>{
+    document.getElementById("container").style="background:black;"
+}));
